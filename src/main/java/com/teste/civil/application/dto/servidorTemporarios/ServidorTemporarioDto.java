@@ -1,4 +1,4 @@
-package com.teste.civil.application.servidorTemporarios;
+package com.teste.civil.application.dto.servidorTemporarios;
 
 import lombok.Getter;
 import lombok.Setter;

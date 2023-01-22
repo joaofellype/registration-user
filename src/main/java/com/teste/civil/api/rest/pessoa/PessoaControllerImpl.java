@@ -1,6 +1,7 @@
 package com.teste.civil.api.rest.pessoa;
 
-import com.teste.civil.application.pessoas.PessoaDto;
+import com.teste.civil.api.rest.shared.BaseControllerImpl;
+import com.teste.civil.application.dto.pessoas.PessoaDto;
 import com.teste.civil.core.services.pessoa.PessoaService;
 import com.teste.civil.core.services.servidorTemporarios.ServidorTemporarioService;
 import org.springframework.http.ResponseEntity;
@@ -8,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @RestController
-public class PessoaControllerImpl implements PessoaController {
+public class PessoaControllerImpl extends BaseControllerImpl<PessoaDto> implements PessoaController {
 
     private PessoaService pessoaService;
     private ServidorTemporarioService servidorTemporarioService;

@@ -1,4 +1,4 @@
-package com.teste.civil.application.fotoPessoas;
+package com.teste.civil.application.dto.fotoPessoas;
 
 import lombok.Getter;
 import lombok.Setter;

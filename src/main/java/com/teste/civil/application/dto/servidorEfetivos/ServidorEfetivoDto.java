@@ -1,4 +1,4 @@
-package com.teste.civil.application.servidorEfetivos;
+package com.teste.civil.application.dto.servidorEfetivos;
 
 import lombok.Getter;
 import lombok.Setter;

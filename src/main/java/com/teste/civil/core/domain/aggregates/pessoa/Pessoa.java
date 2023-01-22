@@ -9,11 +9,6 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "pessoa")
 public class Pessoa implements Aggregate {
-    @Id
-    @Column(name = "pes_id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
-
-    private Long pesId;
     @Column(name = "pes_nome")
     private final String pesNome;
     @Column(name = "pes_data_nascimento")
@@ -24,6 +19,11 @@ public class Pessoa implements Aggregate {
     private final String pesMae;
     @Column(name = "pes_pai")
     private final String pesPai;
+    @Id
+    @Column(name = "pes_id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+
+    private Long pesId;
 
 
     private Pessoa(String pesNome, LocalDateTime pesDataNascimento, String pesSexo, String pesMae, String pesPai) {

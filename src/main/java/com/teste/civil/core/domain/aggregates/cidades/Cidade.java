@@ -18,17 +18,19 @@ public class Cidade implements Aggregate {
     @Column(name = "cid_nome")
     private String cidNome;
     @Column(name = "cid_uf")
-    private String ciUf;
+    private String cidUf;
 
-
-    private Cidade( String cidNome,String ciUf){
-       this.cidNome = cidNome;
-       this.ciUf = ciUf;
+    public Cidade() {
     }
 
-    public static Cidade create(String cidNome,String ciUf){
+    private Cidade(String cidNome, String ciUf) {
+        this.cidNome = cidNome;
+        this.cidUf = ciUf;
+    }
 
-        var cidade = new Cidade(cidNome,ciUf);
+    public static Cidade create(String cidNome, String ciUf) {
+
+        var cidade = new Cidade(cidNome, ciUf);
         CustomValidator.validateAndThrow(cidade);
         return cidade;
     }

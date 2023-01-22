@@ -15,7 +15,7 @@ public class Endereco implements Aggregate {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long endId;
     @Column(name = "end_tipo_logradouro")
-    private  String endTipoLogradouro;
+    private String endTipoLogradouro;
     @Column(name = "end_logradouro")
     private String endLogradouro;
     @Column(name = "end_numero")
@@ -23,21 +23,23 @@ public class Endereco implements Aggregate {
     @Column(name = "end_bairro")
     private String bairro;
     @Column(name = "cid_id")
-    private int cidId;
+    private Long cidId;
 
-    private Endereco(String endTipoLogradouro, String endLogradouro, int endNumero, String bairro, int cidId) {
+    private Endereco(String endTipoLogradouro, String endLogradouro, int endNumero, String bairro, Long cidId) {
         this.endTipoLogradouro = endTipoLogradouro;
         this.endLogradouro = endLogradouro;
         this.endNumero = endNumero;
         this.bairro = bairro;
         this.cidId = cidId;
     }
-    public static Endereco create(String endTipoLogradouro, String endLogradouro, int endNumero, String bairro, int cidId){
+
+    public static Endereco create(String endTipoLogradouro, String endLogradouro, int endNumero, String bairro, Long cidId) {
 
         var endereco = new Endereco(endTipoLogradouro, endLogradouro, endNumero, bairro, cidId);
         CustomValidator.validateAndThrow(endereco);
         return endereco;
     }
+
     @Override
     public Long getId() {
         return endId;

@@ -1,6 +1,6 @@
 package com.teste.civil.api.rest.pessoa;
 
-import com.teste.civil.application.pessoas.PessoaDto;
+import com.teste.civil.application.dto.pessoas.PessoaDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

@@ -1,7 +1,6 @@
 package com.teste.civil.core.services.pessoa;
 
-import com.teste.civil.application.pessoas.PessoaDto;
-import com.teste.civil.core.domain.aggregates.pessoa.Sexo;
+import com.teste.civil.application.dto.pessoas.PessoaDto;
 
 public interface PessoaService {
 

@@ -1,4 +1,4 @@
-package com.teste.civil.application.cidades;
+package com.teste.civil.application.dto.cidades;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

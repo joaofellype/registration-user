@@ -14,17 +14,17 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "foto_pessoa")
 public class FotoPessoa implements Aggregate {
-    @Column(name = "pes_id")
-    private Long pesId;
-    @Id
-    @Column(name = "fp_id")
-    private Long fpId;
     @Column(name = "fp_data")
     private final LocalDateTime fpData;
     @Column(name = "fp_bucket")
     private final String fpBucket;
     @Column(name = "fp_hash")
     private final String fpHash;
+    @Column(name = "pes_id")
+    private Long pesId;
+    @Id
+    @Column(name = "fp_id")
+    private Long fpId;
 
 
     private FotoPessoa(Long pesId, LocalDateTime fpData, String fpBucket, String fpHash) {

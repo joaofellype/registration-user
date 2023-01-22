@@ -4,6 +4,7 @@ import com.teste.civil.core.shared.Aggregate;
 import com.teste.civil.core.shared.validators.CustomValidator;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Getter;
 
@@ -12,8 +13,12 @@ import lombok.Getter;
 @Getter
 public class Unidade implements Aggregate {
 
+    @Id
+    @Column(name = "unid_id")
     private Long unidId;
+    @Column(name = "unid_nome")
     private String unidNome;
+    @Column(name = "unid_sigla")
     private String unidSigla;
 
     private Unidade(Long unidId, String unidNome, String unidSigla) {
@@ -22,16 +27,15 @@ public class Unidade implements Aggregate {
         this.unidSigla = unidSigla;
     }
 
-    public static Unidade create(Long unidId, String unidNome, String unidSigla){
+    public static Unidade create(Long unidId, String unidNome, String unidSigla) {
 
-        var unidade = new Unidade(unidId,unidNome,unidSigla);
+        var unidade = new Unidade(unidId, unidNome, unidSigla);
         CustomValidator.validateAndThrow(unidade);
         return unidade;
     }
 
-
     @Override
     public Long getId() {
-        return null;
+        return unidId;
     }
 }
